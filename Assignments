@@ -1,0 +1,175 @@
+// Example of Array
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+     int num[5]={10,20,30,40,50};
+     
+    //  declaration and initilization of an array
+    printf("the elements of the array are: \n");
+    // printing array elements using a loop
+    for(int i=0;i<5;i++){
+        printf("%d\n",num[i]);
+    }
+
+    return 0;
+}
+// Output of this Question
+the elements of the array are: 
+10
+20
+30
+40
+50
+// Question 2: Types of all operator in a sinlge code
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int a=10,b=5,result;
+    
+    // arithmetic  operators 
+    printf("arithmetic operators:\n");
+    printf("a+b=%d\n",a+b);
+    printf("a-b=%d\n",a-b);
+    printf("a*b=%d\n",a*b);
+    printf("a/b=%d\n",a/b);
+    printf("a%%b=%d\n\n",a%b);
+    // %% is used to print %
+    // relational operator
+    printf("relational operators:\n");
+    printf("a==b:%d\n",a==b);
+    printf("a!=b:%d\n",a!=b);
+    printf("a>b:%d\n",a>b);
+    printf("a<b:%d\n",a<b);
+    // logical operators
+    printf("logical operators:\n");
+    printf("(a>b)&&(a!=0):%d\n",(a>b)&&(a!=0));
+    printf("(a<b)||(b!=0):%d\n",(a<b)&&(b!=0));
+    printf("!(a==b):%d\n\n",(a==b));
+    //assignment operators
+    printf("assignment operators:\n");
+    result=a;// assign value
+    result+=b;//result=result++b
+    printf("result after +=:%d\n\n",result);
+    result-=b;//result=result-b
+    printf("result after-=:%d\n\n",result);
+    // increment and decrement operators 
+    printf("increment/decrement operators:\n");
+    a++;
+    printf("a after a++:%d\n",a);
+    b--;
+    printf("b after b--:%d\n",b);
+
+    return 0;
+}
+// output of this question
+arithmetic operators:
+a+b=15
+a-b=5
+a*b=50
+a/b=2
+a%b=0
+
+relational operators:
+a==b:0
+a!=b:1
+a>b:1
+a<b:0
+logical operators:
+(a>b)&&(a!=0):1
+(a<b)||(b!=0):0
+!(a==b):0
+
+assignment operators:
+result after +=:15
+
+result after-=:10
+
+increment/decrement operators:
+a after a++:11
+b after b--:4
+//Quesion 3: Initialisation of an array
+#include <stdio.h>
+
+int main() {
+    int num = 10;       // a normal integer variable
+    int *ptr;           // declaring a pointer to integer
+
+    ptr = &num;         // initializing pointer with the address of num
+
+    // printing values
+    printf("Value of num: %d\n", num);
+    printf("Address of num: %p\n", &num);
+    printf("Pointer ptr holds address: %p\n", ptr);
+    printf("Value pointed by ptr: %d\n", *ptr);
+
+    return 0;
+}
+// output of this Question
+Value of num: 10
+Address of num: 0x7ffec535fc04
+Pointer ptr holds address: 0x7ffec535fc04
+Value pointed by ptr: 10
+// Question 4: write a code of 1D and 2D array
+// Firstly 1D
+#include <stdio.h>
+
+int main() {
+    int arr[5];  // declaration of a 1D array with 5 elements
+
+    // taking input from user
+    printf("Enter 5 elements of the array:\n");
+    for(int i = 0; i < 5; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // displaying array elements
+    printf("The elements of the array are:\n");
+    for(int i = 0; i < 5; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}
+// output of this question
+Enter 5 elements of the array:
+11
+22
+33
+44
+55
+The elements of the array are:
+11 22 33 44 55 
+// Question 5: Write the types of functons and give one example in code of ach type
+// Answer:There are two type of functions
+1. Library Functions (Predefined Functions):
+These are already defined in C libraries and can be used directly.
+You just need to include the proper header file.
+Example:#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double result = sqrt(25);  // predefined function
+    printf("Square root = %.2lf", result);
+    return 0;
+}
+// output of this question
+Square root = 5.00
+2. User-Defined Functions:
+These are functions created by the programmer to perform a specific task.
+They are divided into four types based on arguments and return value:
+Example: #include <stdio.h>
+
+// function definition
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int sum = add(5, 10);  // function call
+    printf("Sum = %d", sum);
+    return 0;
+}
+// output of this quetion
+Sum = 15
